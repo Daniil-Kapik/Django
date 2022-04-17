@@ -20,5 +20,10 @@
 <a href="{% url 'social:begin' 'github' %}?next=/" class="btn btn-outline-secondary btn-block" role="button">
     Вход через <i class="fa fa-github" aria-hidden="true"></i>
 </a>
+<button class="btn btn-round form-control">
+    <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/">
+    Вход через ВКонтакте
+    </a>
+</button>
 
 {% endblock content %}
