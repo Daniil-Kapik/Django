@@ -1,3 +1,5 @@
+
+
 {% extends 'authnapp/base.html' %}
 {% load static %}
 
@@ -6,15 +8,21 @@
 <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
     {% csrf_token %}
     {% if next_page %}
-        <input type="hidden" name="next_page" value="{{ next_page }}">
+    <input type="hidden" name="next_page" value="{{ next_page }}">
     {% endif %}
     {{ login_form.as_p }}
     <br>
-    <input class="form-control" type="submit" value="войти">
+    <input class="btn btn-outline-primary btn-block" type="submit" value="войти">
 </form>
+<a href="{% url 'auth:register' %}" class="btn btn-outline-secondary btn-block" role="button">
+    зарегистрироваться
+</a>
+<a href="{% url 'social:begin' 'github' %}?next=/" class="btn btn-outline-secondary btn-block" role="button">
+    Вход через <i class="fa fa-github" aria-hidden="true"></i>
+</a>
 <button class="btn btn-round form-control">
-    <a href="{% url 'auth:register' %}" class="">
-        зарегистрироваться
+    <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/">
+    Вход через ВКонтакте
     </a>
 </button>
 
