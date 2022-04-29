@@ -9,6 +9,8 @@ defusedxml==0.7.1
 Deprecated==1.2.13
 Django==3.2
 django-braces==1.15.0
+django-debug-toolbar==3.2.4
+django-debug-toolbar-template-profiler==2.0.2
 django-oauth-toolkit==1.7.1
 django-rest-framework-social-oauth2==1.1.0
 djangorestframework==3.13.1
