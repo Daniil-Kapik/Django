@@ -1,6 +1,7 @@
+from django.urls import re_path
+
 import authnapp.views as authnapp
 from authnapp.apps import AuthnappConfig
-from django.urls import re_path
 
 app_name = AuthnappConfig.name
 

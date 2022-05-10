@@ -1,5 +1,6 @@
-import mainapp.views as mainapp
 from django.urls import re_path
+
+import mainapp.views as mainapp
 
 from .apps import MainappConfig
 
